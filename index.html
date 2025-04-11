@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaon Tayo | Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Kaon Tayo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="text-center py-4">
+    <h1>Welcome to Kaon Tayo</h1>
+    <p class="lead">Kakanin cravings calling? Answer with our irresistible homemade treats! Classic Filipino flavors made with a touch of magic. Get your dose of nostalgia!</p>
+  </header>
+
+  <!-- Featured Products -->
+  <div class="container mt-4">
+    <h3 class="text-center mb-4">Featured Products</h3>
+    <div class="row justify-content-center">
+
+      <!-- BUCHI-->
+      <div class="col-md-3 mb-4">
+        <div class="product-card p-3 border rounded shadow-sm text-center">
+          <img src="BUCHI.jpg" class="product-image img-fluid mb-2" alt="buchi">
+          <h5><a href="#" onclick="showProductDetails('Buchi', 10.00, 'BUCHI.jpg', 'Glutinous rice balls filled with sweet bean paste.')">Buchi</a></h5>
+          <p class="text-muted">Php 10.00</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-outline-warning btn-sm" onclick="addToCart('Buchi', 10.00)">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <a href="contact.html" class="btn btn-success btn-sm">
+              <i class="fas fa-paper-plane"></i> Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--PUTO -->
+      <div class="col-md-3 mb-4">
+        <div class="product-card p-3 border rounded shadow-sm text-center">
+          <img src="PUTO.jpg" class="product-image img-fluid mb-2" alt="PUTO">
+          <h5><a href="#" onclick="showProductDetails('Assorted Puto', 5.00, 'PUTO.jpg', 'Steamed rice cake, topped with cheese or egg.')">Assorted Puto</a></h5>
+          <p class="text-muted">Php 5.00</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-outline-warning btn-sm" onclick="addToCart('Assorted Puto', 5.00)">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <a href="contact.html" class="btn btn-success btn-sm">
+              <i class="fas fa-paper-plane"></i> Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALITAW-->
+      <div class="col-md-3 mb-4">
+        <div class="product-card p-3 border rounded shadow-sm text-center">
+          <img src="palitaw.jpg" class="product-image img-fluid mb-2" alt="palitaw">
+          <h5><a href="#" onclick="showProductDetails('Palitaw', 10.00, 'palitaw.jpg', 'Rice cake topped with sesame seeds and coconut.')">Palitaw</a></h5>
+          <p class="text-muted">Php 10.00</p>
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-outline-warning btn-sm" onclick="addToCart('Palitaw', 10.00)">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <a href="contact.html" class="btn btn-success btn-sm">
+              <i class="fas fa-paper-plane"></i> Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Location Section -->
+  <section class="container my-5">
+    <h4 class="text-center mb-3">📍 Visit Us</h4>
+    <div class="card shadow-sm border-0">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15432.682420477873!2d121.31963744706212!3d13.97905585996154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6413cb1565d3%3A0x30b00e7f9b60b93!2sSan%20Lucas%202%2C%20San%20Pablo%20City%2C%20Laguna!5e0!3m2!1sen!2sph!4v1712722432027!5m2!1sen!2sph" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius: 10px;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+      <div class="card-body text-center">
+        <h5 class="card-title">Brgy. San Lucas 2</h5>
+        <p class="card-text">San Pablo City, Laguna</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PICKUP SECTION OF ORDERS -->
+  <div class="container mb-5">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-10">
+        <p class="mb-3">You can pick up your orders on our store! <strong>Landmark:</strong> Sa tapat ng Brgy. San Lucas 2 Elementary School</p>
+        <div class="row justify-content-center">
+          <div class="col-md-5 mb-3">
+            <h6 class="fw-bold">Where to pick up your craving:</h6>
+            <p>Brgy. San Lucas 2, San Pablo City<br>Laguna</p>
+            <a href="https://www.google.com/maps/place/La+CarlMelita+Garden+Resort/@14.0689296,121.3368467,17z" target="_blank" class="btn btn-outline-dark btn-sm">Get Directions</a>
+        </div>
+          <div class="col-md-5 mb-3">
+            <h6 class="fw-bold">Business Hours:</h6>
+            <p>
+              <strong>Monday and Saturday</strong><br>10:00 AM to 5:00 PM<br><br>
+              <strong>Tuesday to Friday</strong><br>7:00 AM to 5:00 PM<br><br>
+              <strong>Sunday</strong><br>7:00 AM to 3:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAILS -->
+  <div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="productDetailsModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modal-img" src="" alt="Product Image" class="modal-img mb-3 mx-auto d-block rounded" style="max-width: 250px; height: 250px; object-fit: cover;">
+          <h5 id="modal-name" class="fw-bold"></h5>
+          <p id="modal-price" class="text-muted mb-1"></p>
+          <p id="modal-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--CART ICON -->
+  <div class="position-fixed bottom-0 end-0 p-3">
+    <a href="cart.html" class="btn btn-warning position-relative">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+      </span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-5 p-4 bg-light">
+    <p>&copy; Contact Us:</strong> 📞 0951-181-8407 | 📧 kaontayo@gmail.com</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    
+    // Initialize cart
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(name, price) {
+      let existingProduct = cart.find(item => item.name === name);
+      if (existingProduct) {
+        existingProduct.quantity++;
+      } else {
+        cart.push({ name: name, price: price, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+      document.getElementById('cart-count').textContent = cartCount;
+    }
+
+    function showProductDetails(name, price, img, desc) {
+      document.getElementById('modal-name').textContent = name;
+      document.getElementById('modal-img').src = img;
+      document.getElementById('modal-price').textContent = `Php ${price.toFixed(2)}`;
+      document.getElementById('modal-desc').textContent = desc;
+      
+      var myModal = new bootstrap.Modal(document.getElementById('productDetailsModal'));
+      myModal.show();
+    }
+
+    updateCartCount();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
